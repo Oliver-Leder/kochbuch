@@ -15,7 +15,9 @@ header{padding:36px 0 18px;border-bottom:1px solid var(--line)} .eyebrow{font-si
 .tw{overflow-x:auto;border:1px solid var(--line);border-radius:13px;background:var(--card)}
 table{border-collapse:collapse;width:100%;font-size:14px} th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 th{position:sticky;top:0;background:var(--chip);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink2)}
-td.n{text-align:right;white-space:nowrap} small{color:var(--ink2)} li{margin:5px 0}
+td.n{text-align:right;white-space:nowrap}
+.sb{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px;font-size:13.5px;cursor:pointer}
+.sb[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff} small{color:var(--ink2)} li{margin:5px 0}
 footer{padding:30px 0 50px;color:var(--ink2);font-size:13px;border-top:1px solid var(--line);margin-top:40px}
 </style></head><body>
 <header><div class="wrap">
@@ -106,7 +108,112 @@ footer{padding:30px 0 50px;color:var(--ink2);font-size:13px;border-top:1px solid
 <tr><td><a href="index.html#gefuellte-tomaten">Gefüllte Tomaten</a><br><small>4 Portionen laut Rezept</small></td><td class="n"><b>0 µg</b></td><td class="n">0 %</td><td class="n">0 %</td><td class="n">1,5 mg</td><td class="n">14 %</td><td class="n">9 %</td><td><small>–</small></td></tr>
 <tr><td><a href="index.html#risi-bisi-erbsen-champignons">Risi Bisi mit Erbsen und Champignons</a><br><small>4 Portionen laut Rezept</small></td><td class="n"><b>0 µg</b></td><td class="n">0 %</td><td class="n">0 %</td><td class="n">2,6 mg</td><td class="n">24 %</td><td class="n">16 %</td><td><small>–</small></td></tr></tbody></table></div>
 
-<h2>Vegetarische B12-Quellen – absteigend</h2>
+<h2>Lebensmittel nach Eisen und B12 – pro 100 g</h2>
+<p>Vegetarische Lebensmittel mit beiden Werten aus dem Bundeslebensmittelschlüssel 4.0. Sortieren:
+<button class="sb" data-k="fe" aria-pressed="true">Eisen ↓</button> <button class="sb" data-k="b12" aria-pressed="false">Vitamin B12 ↓</button></p>
+<div class="tw"><table id="pt">
+<thead><tr><th>Lebensmittel</th><th>Eisen /100 g</th><th>B12 /100 g</th><th>Quelle</th></tr></thead>
+<tbody><tr data-fe="0.17" data-b12="3.1"><td>Camembert 30 % Fett i. Tr.<br><small>Käse</small></td><td class="n"><b>0,17</b> mg</td><td class="n"><b>3,1</b> µg</td><td><small>BLS M602400 · Camembert mind. 30 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.3" data-b12="2.7"><td>Bergkäse 45 %<br><small>Käse</small></td><td class="n"><b>0,3</b> mg</td><td class="n"><b>2,7</b> µg</td><td><small>BLS M302600 · Bergkäse mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.206" data-b12="2.225"><td>Emmentaler 45 %<br><small>Käse</small></td><td class="n"><b>0,21</b> mg</td><td class="n"><b>2,23</b> µg</td><td><small>BLS M304600 · Emmentaler mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.295" data-b12="2.2"><td>Edamer 30 %<br><small>Käse</small></td><td class="n"><b>0,29</b> mg</td><td class="n"><b>2,2</b> µg</td><td><small>BLS M401400 · Edamer mind. 30 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.28" data-b12="2.2"><td>Gouda 30 %<br><small>Käse</small></td><td class="n"><b>0,28</b> mg</td><td class="n"><b>2,2</b> µg</td><td><small>BLS M402400 · Gouda mind. 30 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.196" data-b12="1.78"><td>Gouda 48 %<br><small>Käse</small></td><td class="n"><b>0,2</b> mg</td><td class="n"><b>1,78</b> µg</td><td><small>BLS M402600 · Gouda 48 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.4" data-b12="2.0"><td>Tilsiter 50 %<br><small>Käse</small></td><td class="n"><b>0,4</b> mg</td><td class="n"><b>2</b> µg</td><td><small>BLS M403700 · Tilsiter mind. 50 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.23" data-b12="2.0"><td>Butterkäse 50 %<br><small>Käse</small></td><td class="n"><b>0,23</b> mg</td><td class="n"><b>2</b> µg</td><td><small>BLS M501700 · Butterkäse mind. 50 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.3" data-b12="2.0"><td>Raclettekäse 45 %<br><small>Käse</small></td><td class="n"><b>0,3</b> mg</td><td class="n"><b>2</b> µg</td><td><small>BLS M307700 · Raclettekäse mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.22" data-b12="2.0"><td>Limburger / Romadur 50 %<br><small>Käse</small></td><td class="n"><b>0,22</b> mg</td><td class="n"><b>2</b> µg</td><td><small>BLS M603700 · Limburger mind. 50 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.29" data-b12="2.0"><td>Harzer / Sauermilchkäse<br><small>Käse</small></td><td class="n"><b>0,29</b> mg</td><td class="n"><b>2</b> µg</td><td><small>BLS M730100 · Sauermilchkäse &lt; 10 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.37" data-b12="2.0"><td>Parmesan 30 %<br><small>Käse</small></td><td class="n"><b>0,37</b> mg</td><td class="n"><b>2</b> µg</td><td><small>BLS M306400 · Parmesan mind. 30 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.3" data-b12="1.8"><td>Brie 45 %<br><small>Käse</small></td><td class="n"><b>0,3</b> mg</td><td class="n"><b>1,8</b> µg</td><td><small>BLS M601600 · Brie mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.12" data-b12="1.75"><td>Halloumi<br><small>Käse</small></td><td class="n"><b>0,12</b> mg</td><td class="n"><b>1,75</b> µg</td><td><small>BLS M524500 · Halloumi Grillkäse</small></td></tr>
+<tr data-fe="0.14" data-b12="1.3"><td>Mozzarella 45 %<br><small>Käse</small></td><td class="n"><b>0,14</b> mg</td><td class="n"><b>1,3</b> µg</td><td><small>BLS M032100 · Mozzarella mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.4" data-b12="1.1"><td>Cheddar 45 %<br><small>Käse</small></td><td class="n"><b>0,4</b> mg</td><td class="n"><b>1,1</b> µg</td><td><small>BLS M303600 · Chester (Cheddar) mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.11" data-b12="0.78"><td>Gorgonzola 48 %<br><small>Käse</small></td><td class="n"><b>0,11</b> mg</td><td class="n"><b>0,78</b> µg</td><td><small>BLS M5B1600 · Gorgonzola mind. 48 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.105" data-b12="0.59"><td>Camembert 45 %<br><small>Käse</small></td><td class="n"><b>0,1</b> mg</td><td class="n"><b>0,59</b> µg</td><td><small>BLS M602600 · Camembert mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.16" data-b12="0.62"><td>Ricotta<br><small>Käse</small></td><td class="n"><b>0,16</b> mg</td><td class="n"><b>0,62</b> µg</td><td><small>BLS M741600 · Ricotta, Molkeneiweißkäse, mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.095" data-b12="0.68"><td>Ziegenfrischkäse<br><small>Käse</small></td><td class="n"><b>0,1</b> mg</td><td class="n"><b>0,68</b> µg</td><td><small>BLS M7A1600 · Frischkäse aus Ziegenmilch, Natur, mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.1" data-b12="0.49"><td>Frischkäse 50 %<br><small>Käse</small></td><td class="n"><b>0,1</b> mg</td><td class="n"><b>0,49</b> µg</td><td><small>BLS M710700 · Frischkäsezubereitung Natur, mind. 50 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.146" data-b12="0.46"><td>Hirtenkäse (Kuhmilch)<br><small>Käse</small></td><td class="n"><b>0,15</b> mg</td><td class="n"><b>0,46</b> µg</td><td><small>BLS M052000 · Salzlakenkäse aus Kuhmilch, Hirtenkäse, mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.14" data-b12="0.44"><td>Feta 45 %<br><small>Käse</small></td><td class="n"><b>0,14</b> mg</td><td class="n"><b>0,44</b> µg</td><td><small>BLS M012200 · Feta mind. 45 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.09" data-b12="0.32"><td>Mascarpone<br><small>Käse</small></td><td class="n"><b>0,09</b> mg</td><td class="n"><b>0,32</b> µg</td><td><small>BLS M7A6800 · Mascarpone mind. 80 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.3" data-b12="2.0"><td>Körniger Frischkäse 20 %<br><small>Quark &amp; Co.</small></td><td class="n"><b>0,3</b> mg</td><td class="n"><b>2</b> µg</td><td><small>BLS M711300 · Körniger Frischkäse mind. 20 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.37" data-b12="0.81"><td>Speisequark 20 %<br><small>Quark &amp; Co.</small></td><td class="n"><b>0,37</b> mg</td><td class="n"><b>0,81</b> µg</td><td><small>BLS M713300 · Speisequark Halbfettstufe, 20 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.035" data-b12="0.61"><td>Magerquark<br><small>Quark &amp; Co.</small></td><td class="n"><b>0,04</b> mg</td><td class="n"><b>0,61</b> µg</td><td><small>BLS M713100 · Speisequark Magerstufe, Magerquark &lt; 10 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.07" data-b12="0.7"><td>Körniger Frischkäse &lt; 10 %<br><small>Quark &amp; Co.</small></td><td class="n"><b>0,07</b> mg</td><td class="n"><b>0,7</b> µg</td><td><small>BLS M711100 · Körniger Frischkäse &lt; 10 % Fett i. Tr.</small></td></tr>
+<tr data-fe="0.041" data-b12="0.0"><td>Skyr<br><small>Quark &amp; Co.</small></td><td class="n"><b>0,04</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS M710100 · Skyr, Frischkäse &lt; 10 % Fett i. Tr.</small></td></tr>
+<tr data-fe="1.8" data-b12="2.7"><td>Hühnerei roh<br><small>Ei</small></td><td class="n"><b>1,8</b> mg</td><td class="n"><b>2,7</b> µg</td><td><small>BLS E111100 · Hühnerei roh</small></td></tr>
+<tr data-fe="1.97" data-b12="2.0"><td>Hühnerei gekocht<br><small>Ei</small></td><td class="n"><b>1,97</b> mg</td><td class="n"><b>2</b> µg</td><td><small>BLS E111132 · Hühnerei gekocht</small></td></tr>
+<tr data-fe="6.24" data-b12="8.21"><td>Eigelb roh<br><small>Ei</small></td><td class="n"><b>6,24</b> mg</td><td class="n"><b>8,21</b> µg</td><td><small>BLS E112100 · Hühnerei Eigelb, roh</small></td></tr>
+<tr data-fe="0.02" data-b12="0.599"><td>H-Vollmilch 3,5 %<br><small>Milch &amp; Joghurt</small></td><td class="n"><b>0,02</b> mg</td><td class="n"><b>0,6</b> µg</td><td><small>BLS M113300 · H-Vollmilch 3,5 % Fett, ultrahocherhitzt</small></td></tr>
+<tr data-fe="0.018" data-b12="0.37"><td>Frische Vollmilch 3,5 %<br><small>Milch &amp; Joghurt</small></td><td class="n"><b>0,02</b> mg</td><td class="n"><b>0,37</b> µg</td><td><small>BLS M111300 · Vollmilch frisch, 3,5 % Fett, pasteurisiert</small></td></tr>
+<tr data-fe="0.022" data-b12="0.5"><td>Kefir 3,5 %<br><small>Milch &amp; Joghurt</small></td><td class="n"><b>0,02</b> mg</td><td class="n"><b>0,5</b> µg</td><td><small>BLS M130300 · Kefir mind. 3,5 % Fett</small></td></tr>
+<tr data-fe="0.044" data-b12="0.4"><td>Joghurt 1,5 %<br><small>Milch &amp; Joghurt</small></td><td class="n"><b>0,04</b> mg</td><td class="n"><b>0,4</b> µg</td><td><small>BLS M141200 · Joghurt fettarm, mind. 1,5 % bis max. 1,8 % Fett</small></td></tr>
+<tr data-fe="0.025" data-b12="0.4"><td>Sahnejoghurt ≥ 10 % (griechische Art)<br><small>Milch &amp; Joghurt</small></td><td class="n"><b>0,03</b> mg</td><td class="n"><b>0,4</b> µg</td><td><small>BLS M141500 · Sahnejoghurt mind. 10 % Fett</small></td></tr>
+<tr data-fe="0.022" data-b12="0.208"><td>Joghurt mild 3,5 %<br><small>Milch &amp; Joghurt</small></td><td class="n"><b>0,02</b> mg</td><td class="n"><b>0,21</b> µg</td><td><small>BLS M141300 · Joghurt mild, mind. 3,5 % Fett</small></td></tr>
+<tr data-fe="0.07" data-b12="0.0"><td>Buttermilch<br><small>Milch &amp; Joghurt</small></td><td class="n"><b>0,07</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS M150000 · Buttermilch</small></td></tr>
+<tr data-fe="0.13" data-b12="0.5"><td>Schmand ≥ 20 %<br><small>Sahne &amp; Fett</small></td><td class="n"><b>0,13</b> mg</td><td class="n"><b>0,5</b> µg</td><td><small>BLS M172700 · Sauerrahm/Schmand, mind. 20 % Fett</small></td></tr>
+<tr data-fe="0.14" data-b12="0.5"><td>Saure Sahne ≥ 10 %<br><small>Sahne &amp; Fett</small></td><td class="n"><b>0,14</b> mg</td><td class="n"><b>0,5</b> µg</td><td><small>BLS M172500 · Sauerrahm/Saure Sahne, mind. 10 % Fett</small></td></tr>
+<tr data-fe="0.03" data-b12="0.4"><td>Schlagsahne 30 %<br><small>Sahne &amp; Fett</small></td><td class="n"><b>0,03</b> mg</td><td class="n"><b>0,4</b> µg</td><td><small>BLS M173800 · Schlagsahne mind. 30 % Fett</small></td></tr>
+<tr data-fe="0.05" data-b12="0.3"><td>Crème fraîche 40 %<br><small>Sahne &amp; Fett</small></td><td class="n"><b>0,05</b> mg</td><td class="n"><b>0,3</b> µg</td><td><small>BLS M172900 · Sauerrahm/Creme fraiche, 40 % Fett</small></td></tr>
+<tr data-fe="0.06" data-b12="0.0"><td>Crème fraîche 30 %<br><small>Sahne &amp; Fett</small></td><td class="n"><b>0,06</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS M176800 · Sauerrahm/Creme fraiche, 30 % Fett</small></td></tr>
+<tr data-fe="0.166" data-b12="0.3"><td>Butter<br><small>Sahne &amp; Fett</small></td><td class="n"><b>0,17</b> mg</td><td class="n"><b>0,3</b> µg</td><td><small>BLS Q611000 · Butter mild gesäuert</small></td></tr>
+<tr data-fe="0.053257" data-b12="0.85"><td>Haferdrink, angereichert<br><small>Angereichert &amp; pflanzlich</small></td><td class="n"><b>0,05</b> mg</td><td class="n"><b>0,85</b> µg</td><td><small>BLS C660200 · Haferdrink ungesüßt, angereichert mit Vitaminen, Calcium und Jod</small></td></tr>
+<tr data-fe="0.414427" data-b12="0.38"><td>Sojadrink, angereichert<br><small>Angereichert &amp; pflanzlich</small></td><td class="n"><b>0,41</b> mg</td><td class="n"><b>0,38</b> µg</td><td><small>BLS H841400 · Sojadrink ungesüßt, angereichert mit Vitaminen und Calcium</small></td></tr>
+<tr data-fe="4.1" data-b12="0.34"><td>Hefeflocken / Nährhefe (nicht angereichert)<br><small>Angereichert &amp; pflanzlich</small></td><td class="n"><b>4,1</b> mg</td><td class="n"><b>0,34</b> µg</td><td><small>BLS K762400 · Hefe Flocken/Nährhefe</small></td></tr>
+<tr data-fe="0.053257" data-b12="0.0"><td>Haferdrink, nicht angereichert<br><small>Angereichert &amp; pflanzlich</small></td><td class="n"><b>0,05</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C660000 · Haferdrink ungesüßt</small></td></tr>
+<tr data-fe="9.7" data-b12="0.0"><td>Sojabohne, getrocknet<br><small>Hülsenfrüchte</small></td><td class="n"><b>9,7</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G750400 · Sojabohne reif</small></td></tr>
+<tr data-fe="8.03" data-b12="0.0"><td>Linse (braun/grün), getrocknet<br><small>Hülsenfrüchte</small></td><td class="n"><b>8,03</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H725100 · Linse reif</small></td></tr>
+<tr data-fe="7.39" data-b12="0.0"><td>Linse rot, getrocknet<br><small>Hülsenfrüchte</small></td><td class="n"><b>7,39</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H730000 · Linse rot reif</small></td></tr>
+<tr data-fe="6.15" data-b12="0.0"><td>Kidneybohne, getrocknet<br><small>Hülsenfrüchte</small></td><td class="n"><b>6,15</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H742100 · Kidneybohne reif</small></td></tr>
+<tr data-fe="6.0" data-b12="0.0"><td>Mungbohne, getrocknet<br><small>Hülsenfrüchte</small></td><td class="n"><b>6</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H770100 · Mungbohne reif</small></td></tr>
+<tr data-fe="5.624" data-b12="0.0"><td>Erbse, getrocknet<br><small>Hülsenfrüchte</small></td><td class="n"><b>5,62</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G760400 · Erbse reif</small></td></tr>
+<tr data-fe="4.9" data-b12="0.0"><td>Kichererbse, getrocknet<br><small>Hülsenfrüchte</small></td><td class="n"><b>4,9</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G770400 · Kichererbse reif</small></td></tr>
+<tr data-fe="7.94" data-b12="0.0"><td>Sojagranulat, trocken<br><small>Hülsenfrüchte</small></td><td class="n"><b>7,94</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H765000 · Sojaschnetzel/Sojagranulat, texturiert, trocken</small></td></tr>
+<tr data-fe="2.84" data-b12="0.0"><td>Tofu<br><small>Hülsenfrüchte</small></td><td class="n"><b>2,84</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H861000 · Tofu</small></td></tr>
+<tr data-fe="2.12" data-b12="0.0"><td>Linse, gekocht<br><small>Hülsenfrüchte</small></td><td class="n"><b>2,12</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H730132 · Linse reif, gekocht</small></td></tr>
+<tr data-fe="2.12" data-b12="0.0"><td>Kidneybohne, Konserve<br><small>Hülsenfrüchte</small></td><td class="n"><b>2,12</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H742902 · Kidneybohne reif, Konserve, abgetropft</small></td></tr>
+<tr data-fe="1.7" data-b12="0.0"><td>Kichererbse, Konserve<br><small>Hülsenfrüchte</small></td><td class="n"><b>1,7</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H720902 · Kichererbse reif, Konserve, abgetropft</small></td></tr>
+<tr data-fe="12.7084" data-b12="0.0"><td>Weizenkleie<br><small>Getreide</small></td><td class="n"><b>12,71</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C217000 · Weizen Kleie</small></td></tr>
+<tr data-fe="7.0808" data-b12="0.0"><td>Amaranth<br><small>Getreide</small></td><td class="n"><b>7,08</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C335000 · Amaranth roh</small></td></tr>
+<tr data-fe="4.43663" data-b12="0.0"><td>Haferflocken<br><small>Getreide</small></td><td class="n"><b>4,44</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C133000 · Hafer Flocken</small></td></tr>
+<tr data-fe="4.43663" data-b12="0.0"><td>Hafer Kleie<br><small>Getreide</small></td><td class="n"><b>4,44</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C138000 · Hafer Kleie</small></td></tr>
+<tr data-fe="3.6021" data-b12="0.0"><td>Quinoa<br><small>Getreide</small></td><td class="n"><b>3,6</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C118000 · Quinoa weiß, roh</small></td></tr>
+<tr data-fe="3.4524" data-b12="0.0"><td>Dinkel, ganzes Korn<br><small>Getreide</small></td><td class="n"><b>3,45</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C236000 · Dinkel ganzes Korn, roh</small></td></tr>
+<tr data-fe="3.4" data-b12="0.0"><td>Vollkornnudeln, roh<br><small>Getreide</small></td><td class="n"><b>3,4</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS E510000 · Vollkornteigwaren eifrei, roh</small></td></tr>
+<tr data-fe="2.7308" data-b12="0.0"><td>Hirse<br><small>Getreide</small></td><td class="n"><b>2,73</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C332000 · Hirse roh</small></td></tr>
+<tr data-fe="2.5767" data-b12="0.0"><td>Couscous, roh<br><small>Getreide</small></td><td class="n"><b>2,58</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS C119200 · Couscous (Hartweizen) roh</small></td></tr>
+<tr data-fe="1.61" data-b12="0.0"><td>Roggenvollkornbrot<br><small>Getreide</small></td><td class="n"><b>1,61</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS B121000 · Roggenvollkornbrot</small></td></tr>
+<tr data-fe="2.7" data-b12="0.0"><td>Nudeln, roh<br><small>Getreide</small></td><td class="n"><b>2,7</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS E401000 · Teigwaren eifrei, roh</small></td></tr>
+<tr data-fe="10.0" data-b12="0.0"><td>Sesam<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>10</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H420100 · Sesam</small></td></tr>
+<tr data-fe="7.5825" data-b12="0.0"><td>Chia-Samen<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>7,58</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H480100 · Chia-Samen</small></td></tr>
+<tr data-fe="7.0" data-b12="0.0"><td>Tahin (Sesammus)<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>7</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS Q901000 · Tahin (Sesammus)</small></td></tr>
+<tr data-fe="6.862" data-b12="0.0"><td>Pistazie<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>6,86</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H250100 · Pistazie</small></td></tr>
+<tr data-fe="6.75" data-b12="0.0"><td>Leinsamen<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>6,75</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H410400 · Leinsamen geschrotet</small></td></tr>
+<tr data-fe="6.41" data-b12="0.0"><td>Cashewkern<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>6,41</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H170100 · Cashewkern</small></td></tr>
+<tr data-fe="5.72" data-b12="0.0"><td>Sonnenblumenkern<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>5,72</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H430100 · Sonnenblumenkern</small></td></tr>
+<tr data-fe="4.891695" data-b12="0.0"><td>Kürbiskern<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>4,89</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H310100 · Kürbiskern</small></td></tr>
+<tr data-fe="4.81" data-b12="0.0"><td>Pinienkern<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>4,81</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H320100 · Pinienkern</small></td></tr>
+<tr data-fe="3.43" data-b12="0.0"><td>Haselnuss<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>3,43</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H130100 · Haselnuss</small></td></tr>
+<tr data-fe="3.11033" data-b12="0.0"><td>Mandel<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>3,11</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H210100 · Mandel süß</small></td></tr>
+<tr data-fe="2.78" data-b12="0.0"><td>Walnuss<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>2,78</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H120100 · Walnuss</small></td></tr>
+<tr data-fe="10.0903" data-b12="0.52"><td>Zartbitterschokolade<br><small>Nüsse &amp; Samen</small></td><td class="n"><b>10,09</b> mg</td><td class="n"><b>0,52</b> µg</td><td><small>BLS S560000 · Zartbitter-/Halbbitterschokolade</small></td></tr>
+<tr data-fe="3.791" data-b12="0.0"><td>Petersilie<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>3,79</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G250100 · Petersilienblatt roh</small></td></tr>
+<tr data-fe="3.17" data-b12="0.0"><td>Basilikum<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>3,17</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G061000 · Basilikum roh</small></td></tr>
+<tr data-fe="3.146" data-b12="0.0"><td>Tomatenmark<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>3,15</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS R160000 · Tomatenmark</small></td></tr>
+<tr data-fe="2.694" data-b12="0.0"><td>Mangold<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>2,69</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G230100 · Mangold roh</small></td></tr>
+<tr data-fe="2.36" data-b12="0.0"><td>Rosinen<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>2,36</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS F840100 · Rosine/Sultanine (Weinbeere getrocknet)</small></td></tr>
+<tr data-fe="2.1" data-b12="0.0"><td>Spinat<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>2,1</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G211100 · Spinat roh</small></td></tr>
+<tr data-fe="1.69" data-b12="0.0"><td>Frühlingszwiebel<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>1,69</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G482100 · Frühlingszwiebel/Lauchzwiebel, roh</small></td></tr>
+<tr data-fe="1.65" data-b12="0.0"><td>Edelkastanie/Marone<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>1,65</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS H230132 · Edelkastanie/Marone, gekocht</small></td></tr>
+<tr data-fe="1.6" data-b12="0.0"><td>Rucola<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>1,6</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G130100 · Rucola roh</small></td></tr>
+<tr data-fe="1.455" data-b12="0.0"><td>Pfifferling<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>1,46</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS K713100 · Pfifferling roh</small></td></tr>
+<tr data-fe="1.3" data-b12="0.0"><td>Champignon<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>1,3</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS K701100 · Champignon roh</small></td></tr>
+<tr data-fe="1.19" data-b12="0.0"><td>Aprikose, getrocknet<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>1,19</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS F201400 · Aprikose getrocknet</small></td></tr>
+<tr data-fe="1.102" data-b12="0.0"><td>Grünkohl<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>1,1</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G322100 · Grünkohl roh</small></td></tr>
+<tr data-fe="0.978" data-b12="0.0"><td>Broccoli<br><small>Gemüse &amp; Obst</small></td><td class="n"><b>0,98</b> mg</td><td class="n"><b>0</b> µg</td><td><small>BLS G312100 · Broccoli roh</small></td></tr></tbody></table></div>
+
+<h2>B12-Quellen im Detail – absteigend</h2>
 <p>Wert pro 100 g aus dem <b>Bundeslebensmittelschlüssel (BLS) 4.0</b>, daneben zum Vergleich die US-Datenbank (USDA), wo es ein passendes Lebensmittel gibt. „Herkunft“ zeigt, wie der BLS-Wert entstanden ist (eigene Laboranalyse, übernommene Fachtabelle, Umrechnung …).</p>
 <div class="tw"><table>
 <thead><tr><th>Lebensmittel</th><th>BLS µg/100 g</th><th>Quelle (BLS 4.0)</th><th>USDA µg/100 g</th><th>Pro Portion</th><th>% Tagesbedarf</th></tr></thead>
@@ -159,7 +266,6 @@ footer{padding:30px 0 50px;color:var(--ink2);font-size:13px;border-top:1px solid
 <tr><td>Buttermilch<br><small>Milch &amp; Joghurt</small></td><td class="n"><b>0</b></td><td><small>BLS M150000 · Buttermilch<br>Herkunft: Analyse</small></td><td class="n">–</td><td class="n">0 µg<br><small>1 Glas (250 ml)</small></td><td class="n">0 %</td></tr>
 <tr><td>Crème fraîche 30 %<br><small>Sahne &amp; Fett</small></td><td class="n"><b>nicht nachweisbar</b></td><td><small>BLS M176800 · Sauerrahm/Creme fraiche, 30 % Fett<br>Herkunft: Analyse</small></td><td class="n">–</td><td class="n">0 µg<br><small>2 EL (50 g)</small></td><td class="n">0 %</td></tr>
 <tr><td>Haferdrink, nicht angereichert<br><small>Angereichert &amp; pflanzlich</small></td><td class="n"><b>0</b></td><td><small>BLS C660000 · Haferdrink ungesüßt<br>Herkunft: Logische Null</small></td><td class="n">–</td><td class="n">0 µg<br><small>1 Glas (250 ml)</small></td><td class="n">0 %</td></tr></tbody></table></div>
-<p><small>Griechischer Joghurt: Der BLS führt keinen eigenen Eintrag; „Sahnejoghurt mind. 10 % Fett“ entspricht dem in Deutschland üblichen griechischen Joghurt (10 %). Eine Variante mit 15 % Fett gibt es in keiner der beiden Datenbanken. Angereicherte Pflanzendrinks: BLS-Wert ist eine Packungsangabe („Labelangabe“) – maßgeblich ist dein Produkt.</small></p>
 
 <h2>Warum Käsesorten so unterschiedlich sind</h2>
 <ul>
@@ -178,12 +284,22 @@ footer{padding:30px 0 50px;color:var(--ink2);font-size:13px;border-top:1px solid
 <li><b>Keine verlässlichen Quellen:</b> Algen, Sauerkraut, Shiitake – sie enthalten oft unwirksame B12-Analoga (DGE-FAQ, Frage 1 und 4).</li>
 </ul>
 
-<h2>Quellen &amp; Methode</h2>
+<h2>Quellen &amp; weiterführende Informationen</h2>
 <ul>
 <li>Max Rubner-Institut (2025): Bundeslebensmittelschlüssel (BLS), Version 4.0 – Deutsche Nährstoffdatenbank. Karlsruhe. DOI: <a href="https://doi.org/10.25826/Data20251217-134202-0" target="_blank" rel="noopener">10.25826/Data20251217-134202-0</a>, Lizenz CC BY 4.0. <a href="https://www.blsdb.de/" target="_blank" rel="noopener">blsdb.de</a></li>
 <li>USDA FoodData Central, SR Legacy (April 2018), <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">fdc.nal.usda.gov</a> – Vergleichswerte sowie Gewürze, Minze, Thymian und weiße Bohnen, die der BLS nicht enthält.</li>
-<li>Rezeptwerte: Zutatenmenge × Nährwert je 100 g, geteilt durch die Portionen. Zutaten ohne Mengenangabe sind mit üblichen Mengen angenommen. Es sind Schätzungen; Garverluste und Aufnahme im Körper sind nicht berücksichtigt.</li>
+<li><a href="https://www.dge.de/fileadmin/dok/gesunde-ernaehrung/faq/DGE-FAQ-Vitamin_B12-2018.pdf" target="_blank" rel="noopener">DGE: Ausgewählte Fragen und Antworten zu Vitamin B12</a></li>
+<li><a href="https://www.dge.de/gesunde-ernaehrung/faq/eisen/" target="_blank" rel="noopener">DGE: Fragen und Antworten zu Eisen</a> · <a href="https://www.dge.de/wissenschaft/referenzwerte/eisen/" target="_blank" rel="noopener">DGE-Referenzwerte Eisen</a></li>
+<li><a href="https://www.bfr.bund.de/fragen-und-antworten/thema/vitamin-b12-bei-pflanzenbasierter-ernaehrung-besonders-auf-eine-angemessene-versorgung-achten/" target="_blank" rel="noopener">BfR: Vitamin B12 bei pflanzenbasierter Ernährung</a></li>
+<li><a href="https://www.bfr.bund.de/de/fragen_und_antworten_zu_eisen_in_lebensmitteln-28383.html" target="_blank" rel="noopener">BfR: Fragen und Antworten zu Eisen in Lebensmitteln</a></li>
 </ul>
 </main>
-<footer><div class="wrap">Keine medizinische Beratung. Bei Fragen zur Versorgung: Hausarzt oder Ernährungsfachkraft.</div></footer>
+<script>
+document.querySelectorAll('.sb').forEach(b => b.onclick = () => {
+  const k = b.dataset.k, tb = document.querySelector('#pt tbody');
+  [...tb.rows].sort((x, y) => y.dataset[k] - x.dataset[k] || x.cells[0].innerText.localeCompare(y.cells[0].innerText)).forEach(r => tb.appendChild(r));
+  document.querySelectorAll('.sb').forEach(o => o.setAttribute('aria-pressed', String(o === b)));
+});
+document.querySelector('.sb[data-k="fe"]').click();
+</script>
 </body></html>
