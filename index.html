@@ -123,6 +123,12 @@ footer.site{border-top:1px solid var(--line);padding:26px 0 46px;color:var(--ink
 
 .chip.reg[aria-pressed="true"]{background:var(--accent2);border-color:var(--accent2)}
 .chip .n{opacity:.6;font-size:12px;margin-left:3px}
+.grpbtn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+#grid.grouped{display:block;padding:10px 0 60px}
+.grp{padding-top:26px}
+.grp>h2{font-size:24px;display:flex;align-items:baseline;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp>h2 span{font:500 13.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink2)}
+.grp>.grid{padding:18px 0 8px}
 .regtag{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent2);font-weight:600}
 .card.note .ph{aspect-ratio:16/7}
 ul.ing li.hd,ol.steps li.hd{cursor:default;border:0;font-family:Georgia,serif;font-weight:600;color:var(--accent2);padding:12px 0 2px;font-size:15.5px}
@@ -161,6 +167,7 @@ ol.steps li.hd::before,ol.steps li.hd::after{display:none}
   <div class="chips" id="chips"></div>
   </div><div class="wrap toolrow" style="margin-top:9px">
   <div class="chips" id="regions"></div>
+  <button class="chip grpbtn" id="group" aria-pressed="false" title="Rezepte nach Region gruppiert anzeigen">▤ Nach Region gruppieren</button>
   <div class="count" id="count"></div>
 </div></div>
 
@@ -196,6 +203,7 @@ const REGIONS = ["Mitteleuropa","Mediterran","Orientalisch","Indisch","Mexikanis
 const regionsOf = r => [r.region, ...(r.also || [])];
 const TAGS = ["Schnell", "Vegetarisch", "Vegan", "Glutenfrei", "Laktosefrei", "Kalorienarm", "Low Carb", "Risotto", "Pfanne", "Ofengericht", "Auflauf"];
 let active = new Set(), region = null, query = "";
+let grouped = localStorage.getItem('kochbuch-grouped') === '1';
 
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const FR = {0.25:'¼',0.5:'½',0.75:'¾',0.33:'⅓',0.67:'⅔',0.2:'⅕',0.13:'⅛'};
@@ -245,7 +253,17 @@ function render(){
   document.getElementById('count').textContent =
     list.length === R.length ? R.length+' Rezepte' : list.length+' von '+R.length;
   document.getElementById('empty').hidden = list.length > 0;
-  document.getElementById('grid').innerHTML = list.map(r => `
+  const grid = document.getElementById('grid');
+  grid.classList.toggle('grouped', grouped);
+  if (grouped) {
+    const groups = REGIONS.concat([...new Set(R.map(r => r.region))].filter(g => !REGIONS.includes(g)))
+      .map(g => [g, list.filter(r => regionsOf(r).includes(g))]).filter(([, l]) => l.length);
+    grid.innerHTML = groups.map(([g, l]) => `
+      <section class="grp"><h2>${esc(g)} <span>${l.length} ${l.length === 1 ? 'Eintrag' : 'Einträge'}</span></h2>
+        <div class="grid">${l.map(card).join('')}</div></section>`).join('');
+  } else grid.innerHTML = list.map(card).join('');
+}
+function card(r){ return `
     <article class="card${r.kind==='note' ? ' note' : ''}" data-slug="${r.slug}">
       <div class="ph">
         <img src="${r.img}" alt="${esc(r.name)}" loading="lazy">
@@ -262,7 +280,7 @@ function render(){
           ${r.rat ? `<span class="stars" title="${r.rat} von 5 bei ${r.ratn} Bewertungen">${stars(r.rat)}</span>` : ''}
         </div>
       </div>
-    </article>`).join('');
+    </article>`;
 }
 
 /* ---- Detail ---- */
@@ -365,6 +383,10 @@ document.getElementById('regions').onclick = e => {
   document.querySelectorAll('#regions .chip').forEach(c => c.setAttribute('aria-pressed', String(c.dataset.reg === region)));
   render();
 };
+const gb = document.getElementById('group');
+gb.setAttribute('aria-pressed', String(grouped));
+gb.onclick = () => { grouped = !grouped; localStorage.setItem('kochbuch-grouped', grouped ? '1' : '0');
+  gb.setAttribute('aria-pressed', String(grouped)); render(); };
 document.getElementById('q').oninput = e => { query = e.target.value; render(); };
 document.getElementById('grid').onclick = e => {
   if (e.target.closest('.src')) return;          // Link zum Original nicht abfangen
