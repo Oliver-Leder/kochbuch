@@ -65,8 +65,8 @@ window.REZEPTE_TRELLO = [
   ],
   "img": "img/bohneneintopf-mit-feta.jpg",
   "credit": {
-   "text": "Wikimedia Commons · Miansari66 · CC0",
-   "url": "https://commons.wikimedia.org/wiki/File:Fasolada.JPG"
+   "text": "Flickr · ultrakml · CC BY 2.0",
+   "url": "https://www.flickr.com/photos/34948727@N00/7445578120"
   },
   "tags": [],
   "kind": "recipe",
