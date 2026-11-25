@@ -226,16 +226,16 @@ window.NAEHRWERTE = {
 ]
 },
 "ofenkaese-baguette": {
-"fe": 0.8,
-"b12": 0.7,
+"fe": 0.9,
+"b12": 3.2,
 "per": "Person",
 "n": 2,
 "note": "2 Portionen laut Rezept",
 "top_b12": [
 [
-"Camembert mind. 45 % Fett i. Tr.",
-0.74,
-"BLS M602600"
+"Camembert mind. 50 % Fett i. Tr.",
+3.25,
+"BLS M602700"
 ]
 ],
 "top_fe": [
@@ -250,9 +250,9 @@ window.NAEHRWERTE = {
 "BLS B311000"
 ],
 [
-"Camembert mind. 45 % Fett i. Tr.",
-0.13,
-"BLS M602600"
+"Camembert mind. 50 % Fett i. Tr.",
+0.16,
+"BLS M602700"
 ]
 ]
 },
