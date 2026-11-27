@@ -1622,24 +1622,76 @@ window.NAEHRWERTE = {
 ]
 },
 "porridge": {
-"fe": 2.4,
-"b12": 0.0,
+"fe": 1.8,
+"b12": 0.6,
 "per": "Person",
 "n": 4,
 "note": "4 Portionen laut Rezept",
-"top_b12": [],
+"top_b12": [
+[
+"Vollmilch frisch, 3,5 % Fett, pasteurisiert",
+0.56,
+"BLS M111300"
+]
+],
 "top_fe": [
 [
 "Hafer Flocken",
 1.77,
 "BLS C133000"
+]
+],
+"variants": [
+[
+"Frische Vollmilch 3,5 %",
+0.56,
+1.8,
+"BLS M111300"
 ],
 [
-"Sojadrink ungesüßt",
-0.62,
-"BLS H841100"
+"H-Vollmilch 3,5 %",
+0.9,
+1.8,
+"BLS M113300"
+],
+[
+"Frische fettarme Milch 1,5 %",
+0.5,
+1.8,
+"BLS M111200"
+],
+[
+"H-Milch fettarm 1,5 %",
+1.15,
+1.8,
+"BLS M113200"
+],
+[
+"Haferdrink, angereichert",
+1.27,
+1.9,
+"BLS C660200"
+],
+[
+"Sojadrink, angereichert",
+0.57,
+2.4,
+"BLS H841400"
+],
+[
+"Haferdrink, nicht angereichert",
+0.0,
+1.9,
+"BLS C660000"
+],
+[
+"Wasser",
+0.0,
+1.8,
+"–"
 ]
-]
+],
+"variant_note": "600 ml"
 },
 "fruehstuecksei": {
 "fe": 1.2,

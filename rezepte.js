@@ -2428,11 +2428,11 @@ window.REZEPTE_TRELLO = [
   ],
   "ing": [
    "160 g Haferflocken (Porridge Oats)",
-   "600 ml Milch, Sojamilch oder Wasser",
+   "600 ml Milch (oder Pflanzendrink oder Wasser)",
    "1 Prise Meersalz"
   ],
   "steps": [
-   "Haferflocken und Milch (oder Wasser) in einem großen Topf auf mittlere Hitze geben.",
+   "Haferflocken und Milch (oder Pflanzendrink bzw. Wasser) in einen großen Topf auf mittlere Hitze geben.",
    "Eine Prise Meersalz zufügen und mit einem Holzlöffel umrühren.",
    "Auf kleiner Flamme 5–6 Minuten unter Rühren simmern lassen, bis es glatt und cremig ist. Für flüssigeres Porridge einen Schuss mehr Milch oder Wasser zugeben.",
    "Nach Belieben mit Toppings verfeinern: frisches Obst, Nüsse, Samen, Honig."
@@ -2443,8 +2443,8 @@ window.REZEPTE_TRELLO = [
   ],
   "img": "img/porridge.jpg",
   "credit": {
-   "text": "Wikimedia Commons · Renee Comet (Photographer) · Public domain",
-   "url": "https://commons.wikimedia.org/wiki/File:Oatmeal_(1).jpg"
+   "text": "Flickr · Ruth and Dave · CC BY 2.0",
+   "url": "https://www.flickr.com/photos/95142644@N00/26253030424"
   },
   "kind": "recipe",
   "origin": "Trello"

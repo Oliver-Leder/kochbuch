@@ -363,6 +363,10 @@ function paint(){
           <tr><td>Vitamin B12</td><td><b>${dec(r.nutr.b12)} µg</b></td><td>${Math.round(r.nutr.b12/4*100)} % von 4 µg</td><td>${Math.round(r.nutr.b12/4*100)} % von 4 µg</td></tr>
           <tr><td>Eisen</td><td><b>${dec(r.nutr.fe)} mg</b></td><td>${Math.round(r.nutr.fe/11*100)} % von 11 mg</td><td>${Math.round(r.nutr.fe/16*100)} % von 16 mg</td></tr>
         </table>
+        ${r.nutr.variants ? `<table class="nt" style="margin-top:8px">
+          <tr><th>Variante (${esc(r.nutr.variant_note)})</th><th>B12 pro Person</th><th>Mann / Frau</th><th>Eisen</th><th>Quelle</th></tr>
+          ${r.nutr.variants.map(v => `<tr><td>${esc(v[0])}</td><td><b>${dec(v[1])} µg</b></td><td>${Math.round(v[1]/4*100)} %</td><td>${dec(v[2])} mg</td><td><small style="display:inline;margin:0">${esc(v[3])}</small></td></tr>`).join('')}
+        </table>` : ''}
         <small>${esc(r.nutr.note)}.${r.nutr.top_b12.length ? ` B12 vor allem aus: ${r.nutr.top_b12.map(t => esc(t[0]) + ' (' + dec(t[1]) + ' µg, ' + esc(t[2]) + ')').join(', ')}.` : ' Kein nennenswertes B12.'}
         ${r.nutr.top_fe.length ? ` Eisen vor allem aus: ${r.nutr.top_fe.map(t => esc(t[0]) + ' (' + dec(t[1]) + ' mg)').join(', ')}.` : ''}
         Geschätzt aus den Zutaten mit Nährwerten aus dem Bundeslebensmittelschlüssel 4.0 (ergänzend USDA). Bedarf laut DGE. <a href="b12.html">Mehr zu B12 und den Quellen →</a></small>
